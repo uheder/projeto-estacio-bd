@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Integração PHP Banco de Dados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    
+  </head>
+  <body>  
+    <section class="container">
+        <h1>Ciência da Computação</h1>
+        <h2>Integração com Bancos de Dados</h2>
+        <p>Usando PHP e MySQL, no servidor Apache via XAMPP</p>
+    </section>
+    <hr>
+    <section class="container">
+        <!-- envia dados para validacao -->
+      <form action="validacao.php" method="post">
+        <h4>Nome</h4>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <h4>CPF</h4>
+        <input type="number" name="cpf" placeholder="CPF" minlength=11 maxlength=11 pattern="[0-9]{11}"required>
+        <h4>E-mail</h4>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <h4>Data de Nascimento</h4>
+        <input type="date" name="data_nascimento" placeholder="Data de Nascimento" required>
+        <hr>
+        <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+      </form>
+      <footer><i>Criado por Uheder Macedo</i> </footer>
+  </body>
+</html>
