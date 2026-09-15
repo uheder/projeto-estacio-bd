@@ -35,17 +35,12 @@ function validaDados($nome, $cpf, $email, $data_nascimento){
 
 // tudo validado, envia para o banco de dados
 
-define('HOST', 'localhost');
-define('DBNAME', 'cliente');
-define('USER', 'root');
-define('PASS', '');
-
 try {
     if (validaDados($nome, $cpf, $email, $data_nascimento)){
         // header("Location: db_access.php");
         // exit;
 
-    $dsn = new PDO("mysql:host=".HOST.";dbname=".DBNAME, USER, PASS);
+    $dsn = new PDO("mysql:host=".$_ENV['DB_HOST'].";dbname=".$_ENV['DB_NAME'], $_ENV['DB_USER'], $_ENV['DB_PASS']);
     $dsn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         // query insert
